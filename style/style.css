@@ -190,23 +190,40 @@ header p {
 }
 
 
-/* Thumbnail Styles */
+/* Figure Styles */
+
+.fig-small{
+	width: 25%;
+	height:auto;
+	overflow: hidden;
+
+}
+.fig-small img{
+	display: block;
+	width:100%;
+}
 .thumbnails {
 	margin-right: -15px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap
 }
 
 .thumbnails a {
-	float: left;
 	width: 25%;
 	box-sizing: border-box;
 	padding-right: 15px;
 	margin-bottom: 15px;
+	max-height:150px;
+	overflow:hidden;
+	margin:10px;
 }
 
 .thumbnails img {
 	width: 100%;
 	height: auto;
 	display: block;
+	object-fit: contain;
 	transition: all .2s ease-in-out;
 }
 
@@ -217,7 +234,7 @@ header p {
 
 .thumbnails:hover img:hover {
 	opacity: 1;
-	transform: scale(1) rotate(2deg);
+	transform: scale(1.1);
 	box-shadow: 0 0 7px rgba(0, 0, 0, .5);
 }
 
